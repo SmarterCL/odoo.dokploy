@@ -5,28 +5,30 @@ import { Settings, Link2, Headphones, Code, ArrowRight } from "lucide-react"
 const services = [
   {
     icon: Settings,
-    title: "Implantamos Odoo Enterprise",
+    title: "Implementación Odoo Enterprise",
     description:
-      "Quiero un proyecto Odoo. Implementación completa adaptada a tu negocio con las mejores prácticas del mercado.",
+      "Diseñamos el proyecto según tus procesos: ventas, compras, inventario, contabilidad, servicio técnico y más. Incluye análisis, parametrización y salida en producción.",
     cta: "Iniciar proyecto",
   },
   {
     icon: Link2,
-    title: "Integramos con terceros",
+    title: "Integraciones listas para usar",
     description:
-      "Conéctame a Amazon, Mercado Pago, Prestashop, Fedex, lo que necesites. Integración con cualquier plataforma.",
+      "Conectamos Odoo con WhatsApp Business (Cloud API), portales web, ecommerce y APIs externas. Sin integraciones a medida eternas ni sorpresas ocultas.",
     cta: "Ver integraciones",
   },
   {
     icon: Headphones,
-    title: "Servicios profesionales",
-    description: "Necesito soporte técnico, migración de datos, formación y/o alojamiento gestionado para tu ERP.",
+    title: "Servicios profesionales Odoo",
+    description:
+      "Soporte técnico, migración de versiones, formación a usuarios y hosting gestionado. Un equipo que entiende negocio, no solo código.",
     cta: "Solicitar soporte",
   },
   {
     icon: Code,
-    title: "Desarrollo a tu medida",
-    description: "Quiero personalizar mi ERP. Desarrollamos módulos personalizados según tus procesos específicos.",
+    title: "Desarrollo a medida sobre Odoo",
+    description:
+      "Cuando tu proceso no cabe en un módulo estándar, extendemos Odoo con desarrollos limpios, documentados y mantenibles.",
     cta: "Personalizar Odoo",
   },
 ]
@@ -38,10 +40,10 @@ export function ServicesSection() {
         <div className="text-center mb-16">
           <p className="text-sm font-medium text-primary mb-4">Nuestros servicios</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">
-            Nuestra colección de servicios tecnológicos abarca todas las necesidades
+            Especialistas Odoo en Chile, con enfoque en automatización e IA
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Explora cómo ayudamos a las empresas a transformarse con Odoo
+            No solo te dejamos Odoo andando: lo conectamos con tu operación real
           </p>
         </div>
 

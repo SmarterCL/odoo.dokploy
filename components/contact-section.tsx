@@ -13,22 +13,22 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Teléfono",
-    value: "+56 984972986",
+    value: "+56 9 XXXX XXXX",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "info@nubastalia.com",
+    value: "contacto@smarteros.cl",
   },
   {
     icon: Clock,
     label: "Horario",
-    value: "9:00-14:00 y 15:00-18:00",
+    value: "Lunes a Viernes, 9:00-18:00",
   },
   {
     icon: MapPin,
     label: "Ubicación",
-    value: "Santiago, Chile",
+    value: "Chile - Proyectos remotos y presenciales",
   },
 ]
 
@@ -42,7 +42,6 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
     console.log(formData)
   }
 
@@ -55,11 +54,10 @@ export function ContactSection() {
             <div>
               <p className="text-sm font-medium text-primary mb-4">Contacto</p>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">
-                ¿Te interesaría probar nuestras soluciones?
+                Hablemos de tu proyecto
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Nuestra meta es mejorar los procesos internos e incrementar la productividad de cada uno de nuestros
-                clientes a través de productos tecnológicos pensados para su gestión diaria y proyección a largo plazo.
+                SmarterOS Chile - Plataforma de automatización y ERP basada en Odoo, n8n, Chatwoot, Supabase y Ollama.
               </p>
             </div>
 
@@ -81,10 +79,9 @@ export function ContactSection() {
 
             <div className="p-6 bg-primary/5 rounded-2xl border border-primary/20">
               <p className="text-sm text-foreground">
-                <strong className="text-primary">¡Somos partners para el largo plazo!</strong>
+                <strong className="text-primary">Stack completo:</strong>
                 <br />
-                Construimos grandes productos para solucionar sus problemas y necesidades de negocio con la máxima
-                garantía de éxito.
+                Odoo Enterprise + n8n + WhatsApp Cloud API + Chatwoot + Ollama (IA local) + Supabase + VPS gestionado
               </p>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Award, CheckCircle2 } from "lucide-react"
+import { ArrowRight, Zap, CheckCircle2 } from "lucide-react"
 
 export function HeroSection() {
   return (
@@ -16,22 +16,21 @@ export function HeroSection() {
           {/* Left Content */}
           <div className="space-y-8">
             <Badge variant="outline" className="border-primary/50 text-primary bg-primary/10 px-4 py-2">
-              <Award className="w-4 h-4 mr-2" />
-              ¡Somos Silver Partner de Odoo!
+              <Zap className="w-4 h-4 mr-2" />
+              Odoo + IA + Automatización
             </Badge>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance">
-              Somos Odoo Chile <span className="text-primary">desde 2011</span>
+              Odoo ERP en Chile, <span className="text-primary">sin integraciones dolorosas</span>
             </h1>
 
             <p className="text-lg text-background/70 max-w-xl leading-relaxed">
-              Uno de los partners más antiguos de Chile. Nuestra experiencia en desarrollo, personalización e
-              implementación del ERP nos convierte en un referente del mercado.
+              Implementamos Odoo con conexiones listas a WhatsApp, IA local, n8n y tu negocio real. Pruébalo gratis.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                Quiero un proyecto Odoo
+                Quiero ver una demo
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
               <Button
@@ -39,12 +38,12 @@ export function HeroSection() {
                 variant="outline"
                 className="border-background/30 text-background hover:bg-background/10 bg-transparent"
               >
-                Ver servicios
+                Agenda una llamada 20 min
               </Button>
             </div>
 
             <div className="flex flex-wrap gap-6 pt-4">
-              {["Tecnología avanzada", "Procesos empresariales", "Todos los sectores"].map((item) => (
+              {["WhatsApp integrado", "IA local con Ollama", "Automatización n8n"].map((item) => (
                 <div key={item} className="flex items-center gap-2 text-sm text-background/70">
                   <CheckCircle2 className="w-4 h-4 text-primary" />
                   {item}
@@ -57,8 +56,8 @@ export function HeroSection() {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
               <img
-                src="/modern-office-team-working-on-erp-software-impleme.jpg"
-                alt="Equipo Nubastalia trabajando en implementación de Odoo"
+                src="/modern-tech-dashboard-with-automation-flows-and-ai.jpg"
+                alt="SmarterOS Dashboard con automatización e IA"
                 className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
@@ -67,18 +66,18 @@ export function HeroSection() {
               <div className="absolute bottom-6 left-6 right-6 bg-card/95 backdrop-blur-sm rounded-xl p-4 text-card-foreground">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-muted-foreground">Tasa de retención</p>
-                    <p className="text-2xl font-bold text-primary">+94%</p>
+                    <p className="text-sm text-muted-foreground">Ahorro en integración</p>
+                    <p className="text-2xl font-bold text-primary">+70%</p>
                   </div>
                   <div className="h-12 w-px bg-border" />
                   <div>
-                    <p className="text-sm text-muted-foreground">Años de experiencia</p>
-                    <p className="text-2xl font-bold text-primary">+14</p>
+                    <p className="text-sm text-muted-foreground">Tiempo de setup</p>
+                    <p className="text-2xl font-bold text-primary">-50%</p>
                   </div>
                   <div className="h-12 w-px bg-border" />
                   <div>
-                    <p className="text-sm text-muted-foreground">Clientes activos</p>
-                    <p className="text-2xl font-bold text-primary">+50</p>
+                    <p className="text-sm text-muted-foreground">Sin SaaS cerrado</p>
+                    <p className="text-2xl font-bold text-primary">100%</p>
                   </div>
                 </div>
               </div>

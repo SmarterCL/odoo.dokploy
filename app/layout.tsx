@@ -8,11 +8,11 @@ const _inter = Inter({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Nubastalia Chile | Partner Odoo - Implementación ERP",
+  title: "SmarterOS Chile | Odoo ERP + IA + Automatización",
   description:
-    "Somos Odoo Chile desde 2011. Partner Silver de Odoo especializado en desarrollo, personalización e implementación del ERP. +14 años de experiencia en España, Europa y América Latina.",
-  keywords: "Odoo, ERP, Chile, implementación, desarrollo, personalización, partner, Silver Partner",
-    generator: 'v0.app'
+    "Implementamos Odoo con conexiones listas a WhatsApp, IA local, n8n y tu negocio real. Especialistas Odoo en Chile con enfoque en automatización e inteligencia artificial.",
+  keywords: "Odoo, ERP, Chile, implementación, automatización, IA, n8n, WhatsApp, SmarterOS",
+  generator: "v0.app",
 }
 
 export default function RootLayout({

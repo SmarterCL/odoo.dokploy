@@ -7,10 +7,9 @@ import { Menu, X } from "lucide-react"
 
 const navItems = [
   { label: "Inicio", href: "#" },
-  { label: "Productos Odoo", href: "#servicios" },
-  { label: "Servicios", href: "#transformar" },
-  { label: "Cambio de Partner", href: "#" },
-  { label: "Migración SAP", href: "#" },
+  { label: "Servicios", href: "#servicios" },
+  { label: "Diferenciadores", href: "#diferenciadores" },
+  { label: "Sectores", href: "#sectores" },
   { label: "Contacto", href: "#contacto" },
 ]
 
@@ -21,12 +20,11 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-foreground/95 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">N</span>
+              <span className="text-primary-foreground font-bold text-sm">S</span>
             </div>
-            <span className="text-xl font-bold text-background">Nubastalia</span>
+            <span className="text-xl font-bold text-background">SmarterOS</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -44,7 +42,7 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">Solicitar Demo</Button>
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">Ver Demo</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -71,7 +69,7 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 w-fit">Solicitar Demo</Button>
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 w-fit">Ver Demo</Button>
             </nav>
           </div>
         )}

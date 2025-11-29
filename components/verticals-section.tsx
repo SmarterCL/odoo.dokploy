@@ -1,52 +1,52 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Truck, UtensilsCrossed, Package, Factory, Briefcase, Building2 } from "lucide-react"
+import { Truck, Package, Building2, Laptop, ShoppingCart, Globe } from "lucide-react"
 
 const verticals = [
   {
-    icon: UtensilsCrossed,
-    title: "Alimentación",
-    description: "Gestiona de forma eficiente cada etapa del proceso alimentario con trazabilidad completa.",
-  },
-  {
     icon: Package,
-    title: "Import-Export",
-    description: "Lleva control total de tus gastos, documentación aduanera y logística internacional.",
-  },
-  {
-    icon: Truck,
-    title: "Logística",
-    description: "Optimiza rutas, gestiona flotas y controla inventarios en tiempo real.",
-  },
-  {
-    icon: Factory,
-    title: "Fabricación",
-    description: "Control de producción, MRP, calidad y mantenimiento integrado.",
-  },
-  {
-    icon: Briefcase,
-    title: "Servicios",
-    description: "Gestión de proyectos, hojas de tiempo y facturación automatizada.",
+    title: "Importación y distribución",
+    description: "Control total de gastos, documentación aduanera y logística internacional con trazabilidad completa.",
   },
   {
     icon: Building2,
-    title: "Multinacionales",
-    description: "Soluciones multiempresa, multimoneda y multidioma para operaciones globales.",
+    title: "Empresas de servicios B2B",
+    description: "Gestión de proyectos, hojas de tiempo, facturación automatizada y seguimiento de clientes.",
+  },
+  {
+    icon: Truck,
+    title: "Logística y transporte",
+    description: "Optimiza rutas, gestiona flotas y controla inventarios en tiempo real con IA.",
+  },
+  {
+    icon: ShoppingCart,
+    title: "Alimentos y retail",
+    description: "Trazabilidad completa, gestión de lotes, fechas de vencimiento y punto de venta integrado.",
+  },
+  {
+    icon: Laptop,
+    title: "SaaS / tecnología",
+    description: "Facturación recurrente, gestión de suscripciones y métricas de producto.",
+  },
+  {
+    icon: Globe,
+    title: "Comercio exterior",
+    description: "Multi-moneda, multi-empresa y gestión documental para operaciones internacionales.",
   },
 ]
 
 export function VerticalsSection() {
   return (
-    <section className="py-20 lg:py-32 bg-background">
+    <section id="sectores" className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="text-sm font-medium text-primary mb-4">Sectores</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">
-            Trabajamos todos los sectores
+            Sectores donde SmarterOS + Odoo ya marcan la diferencia
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Nubastalia se adapta a cualquier tipo de empresa, sin importar la complejidad de la industria o el tipo de
-            proyecto tecnológico.
+            Cada industria tiene particularidades. SmarterOS te da un ERP + automatización + canales digitales adaptados
+            a la realidad chilena.
           </p>
         </div>
 
@@ -73,7 +73,7 @@ export function VerticalsSection() {
 
         <div className="text-center mt-12">
           <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-            Te ayudamos según tus procesos internos
+            Cuéntanos tu industria
           </Button>
         </div>
       </div>

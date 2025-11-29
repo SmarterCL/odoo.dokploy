@@ -2,16 +2,16 @@ import { CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const benefits = [
-  "Optimiza tus procesos con una implementación a medida",
-  "Acelera el crecimiento de tu empresa con herramientas adaptadas",
-  "Asegura un soporte experto con consultoría de negocio",
-  "Programación, formación y asistencia técnica incluida",
-  "Alojamiento técnico gestionado para máxima eficiencia",
+  "Odoo no queda solo: viene conectado a IA local, WhatsApp, n8n y tu stack",
+  "Todo corre en tu VPS o nuestro VPS gestionado, no dependes de un SaaS cerrado",
+  "Multi-empresa y multi-RUT desde el diseño, pensando en Chile",
+  "Migración de canales de soporte a Chatwoot incluida",
+  "Documentación y scripts para que no quedes atado a una sola persona",
 ]
 
 export function TransformSection() {
   return (
-    <section id="transformar" className="py-20 lg:py-32 bg-muted">
+    <section id="diferenciadores" className="py-20 lg:py-32 bg-muted">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Image */}
@@ -20,27 +20,27 @@ export function TransformSection() {
               <div className="space-y-4">
                 <div className="rounded-2xl overflow-hidden aspect-square">
                   <img
-                    src="/warehouse-logistics-management-software-chile.jpg"
-                    alt="Gestión de almacén con Odoo"
+                    src="/automation-workflow-dashboard-n8n-style.jpg"
+                    alt="Automatización con n8n"
                     className="object-cover w-full h-full"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden aspect-video">
                   <img
-                    src="/food-industry-production-line-management.jpg"
-                    alt="Industria alimentaria"
+                    src="/whatsapp-business-chat-integration.jpg"
+                    alt="WhatsApp Business integrado"
                     className="object-cover w-full h-full"
                   />
                 </div>
               </div>
               <div className="space-y-4 pt-8">
                 <div className="rounded-2xl overflow-hidden aspect-video">
-                  <img src="/import-export-cargo-shipping-containers.jpg" alt="Import-Export" className="object-cover w-full h-full" />
+                  <img src="/modern-ai-chatbot.png" alt="IA y Chatbots" className="object-cover w-full h-full" />
                 </div>
                 <div className="rounded-2xl overflow-hidden aspect-square">
                   <img
-                    src="/modern-office-business-meeting-erp.jpg"
-                    alt="Reunión de negocios"
+                    src="/server-infrastructure-vps-cloud.jpg"
+                    alt="Infraestructura propia"
                     className="object-cover w-full h-full"
                   />
                 </div>
@@ -51,20 +51,15 @@ export function TransformSection() {
           {/* Right - Content */}
           <div className="space-y-8">
             <div>
-              <p className="text-sm font-medium text-primary mb-4">Transformación empresarial</p>
+              <p className="text-sm font-medium text-primary mb-4">Nuestra diferencia</p>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">
-                ¿Cómo puede Nubastalia transformar tu empresa?
+                ¿Qué hacemos distinto a un partner Odoo tradicional?
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                En Nubastalia, hacemos que Odoo trabaje para ti. Nos encargamos de desarrollar, personalizar, integrar e
-                implantar Odoo sin importar el sector en el que operes.
+                En SmarterOS unimos Odoo Enterprise, automatización con n8n, WhatsApp oficial, IA local con Ollama y un
+                centro de agentes MCP, todo corriendo en tu propio servidor o en nuestra infraestructura gestionada.
               </p>
             </div>
-
-            <p className="text-muted-foreground">
-              Si tu negocio se dedica a la importación, fabricación, servicios, alimentación, logística o cualquier otra
-              industria, tenemos la solución que necesitas.
-            </p>
 
             <ul className="space-y-4">
               {benefits.map((benefit) => (
@@ -76,7 +71,7 @@ export function TransformSection() {
             </ul>
 
             <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-              Descubre cómo podemos ayudarte
+              Conoce cómo funciona
             </Button>
           </div>
         </div>

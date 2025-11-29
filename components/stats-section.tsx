@@ -3,14 +3,13 @@
 import { useEffect, useState, useRef } from "react"
 
 const stats = [
-  { value: 50, suffix: "+", label: "Clientes" },
-  { value: 1000, suffix: "+", label: "Usuarios de Odoo gestionados" },
-  { value: 15, suffix: "+", label: "Industrias atendidas" },
-  { value: 2000, suffix: "+", label: "Incidencias resueltas al año" },
-  { value: 500, suffix: "+", label: "Horas de formación al año" },
+  { value: 70, suffix: "%", label: "Ahorro en tiempo de integración" },
+  { value: 100, suffix: "%", label: "Control de tu infraestructura" },
+  { value: 24, suffix: "/7", label: "Monitoreo de sistemas" },
+  { value: 0, suffix: "", label: "Dependencia de SaaS cerrados", displayValue: "Cero" },
 ]
 
-function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
+function AnimatedNumber({ value, suffix, displayValue }: { value: number; suffix: string; displayValue?: string }) {
   const [count, setCount] = useState(0)
   const ref = useRef<HTMLDivElement>(null)
   const [hasAnimated, setHasAnimated] = useState(false)
@@ -20,6 +19,10 @@ function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated) {
           setHasAnimated(true)
+          if (displayValue) {
+            setCount(value)
+            return
+          }
           const duration = 2000
           const steps = 60
           const increment = value / steps
@@ -44,12 +47,16 @@ function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
     }
 
     return () => observer.disconnect()
-  }, [value, hasAnimated])
+  }, [value, hasAnimated, displayValue])
 
   return (
     <div ref={ref} className="text-4xl md:text-5xl font-bold text-background">
-      {count.toLocaleString()}
-      {suffix}
+      {displayValue || (
+        <>
+          {count.toLocaleString()}
+          {suffix}
+        </>
+      )}
     </div>
   )
 }
@@ -59,18 +66,17 @@ export function StatsSection() {
     <section className="py-20 lg:py-32 bg-foreground text-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <p className="text-sm font-medium text-primary mb-4">Nubastalia en cifras</p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">Nuestros datos nos avalan</h2>
+          <p className="text-sm font-medium text-primary mb-4">SmarterOS en números</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">Resultados que marcan la diferencia</h2>
           <p className="text-background/70 max-w-2xl mx-auto">
-            +94% de nuestros clientes siguen vinculados a Nubastalia, un reflejo de nuestra capacidad tecnológica
-            superior y nuestros servicios profesionales de garantía.
+            Llevamos años trabajando con empresas chilenas que necesitan algo más que un ERP instalado.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center space-y-2">
-              <AnimatedNumber value={stat.value} suffix={stat.suffix} />
+              <AnimatedNumber value={stat.value} suffix={stat.suffix} displayValue={stat.displayValue} />
               <p className="text-sm text-background/70">{stat.label}</p>
             </div>
           ))}
