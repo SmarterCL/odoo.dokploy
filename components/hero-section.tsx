@@ -20,11 +20,11 @@ export function HeroSection() {
               Odoo + IA + Automatización
             </Badge>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance">
               Odoo ERP en Chile, <span className="text-primary">sin integraciones dolorosas</span>
             </h1>
 
-            <p className="text-lg text-background/70 max-w-xl leading-relaxed">
+            <p className="text-base sm:text-lg text-background/70 max-w-xl leading-relaxed">
               Implementamos Odoo con conexiones listas a WhatsApp, IA local, n8n y tu negocio real. Pruébalo gratis.
             </p>
 
@@ -63,21 +63,21 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
 
               {/* Floating Card */}
-              <div className="absolute bottom-6 left-6 right-6 bg-card/95 backdrop-blur-sm rounded-xl p-4 text-card-foreground">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-sm text-muted-foreground">Ahorro en integración</p>
-                    <p className="text-2xl font-bold text-primary">+70%</p>
+              <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 bg-card/95 backdrop-blur-sm rounded-xl p-3 sm:p-4 text-card-foreground">
+                <div className="flex items-center justify-between gap-2 sm:gap-4">
+                  <div className="flex-1 text-center">
+                    <p className="text-xs sm:text-sm text-muted-foreground">Ahorro</p>
+                    <p className="text-lg sm:text-2xl font-bold text-primary">+70%</p>
                   </div>
-                  <div className="h-12 w-px bg-border" />
-                  <div>
-                    <p className="text-sm text-muted-foreground">Tiempo de setup</p>
-                    <p className="text-2xl font-bold text-primary">-50%</p>
+                  <div className="h-10 sm:h-12 w-px bg-border" />
+                  <div className="flex-1 text-center">
+                    <p className="text-xs sm:text-sm text-muted-foreground">Setup</p>
+                    <p className="text-lg sm:text-2xl font-bold text-primary">-50%</p>
                   </div>
-                  <div className="h-12 w-px bg-border" />
-                  <div>
-                    <p className="text-sm text-muted-foreground">Sin SaaS cerrado</p>
-                    <p className="text-2xl font-bold text-primary">100%</p>
+                  <div className="h-10 sm:h-12 w-px bg-border" />
+                  <div className="flex-1 text-center">
+                    <p className="text-xs sm:text-sm text-muted-foreground">Open</p>
+                    <p className="text-lg sm:text-2xl font-bold text-primary">100%</p>
                   </div>
                 </div>
               </div>

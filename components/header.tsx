@@ -57,19 +57,19 @@ export function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-background/10">
+          <div className="lg:hidden py-4 border-t border-background/10 animate-in slide-in-from-top-2 duration-200">
             <nav className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="text-sm text-background/80 hover:text-background transition-colors"
+                  className="text-sm text-background/80 hover:text-background transition-colors py-2 px-2 rounded-md hover:bg-background/10"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
               ))}
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 w-fit">Ver Demo</Button>
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 w-full sm:w-fit mt-2">Ver Demo</Button>
             </nav>
           </div>
         )}
