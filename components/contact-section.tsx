@@ -46,39 +46,39 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contacto" className="py-20 lg:py-32 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12">
+    <section id="contacto" className="py-16 sm:py-20 lg:py-32 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Left - Contact Info */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             <div>
               <p className="text-sm font-medium text-primary mb-4">Contacto</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 sm:mb-6 text-balance leading-tight">
                 Hablemos de tu proyecto
               </h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 SmarterOS Chile - Plataforma de automatización y ERP basada en Odoo, n8n, Chatwoot, Supabase y Ollama.
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
               {contactInfo.map((info) => (
                 <Card key={info.label} className="border-border/50">
-                  <CardContent className="p-4 flex items-center gap-4">
+                  <CardContent className="p-3 sm:p-4 flex items-start sm:items-center gap-3 sm:gap-4">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <info.icon className="w-5 h-5 text-primary" />
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <p className="text-xs text-muted-foreground">{info.label}</p>
-                      <p className="text-sm font-medium text-foreground">{info.value}</p>
+                      <p className="text-xs sm:text-sm font-medium text-foreground break-words">{info.value}</p>
                     </div>
                   </CardContent>
                 </Card>
               ))}
             </div>
 
-            <div className="p-6 bg-primary/5 rounded-2xl border border-primary/20">
-              <p className="text-sm text-foreground">
+            <div className="p-4 sm:p-6 bg-primary/5 rounded-xl sm:rounded-2xl border border-primary/20">
+              <p className="text-xs sm:text-sm text-foreground leading-relaxed">
                 <strong className="text-primary">Stack completo:</strong>
                 <br />
                 Odoo Enterprise + n8n + WhatsApp Cloud API + Chatwoot + Ollama (IA local) + Supabase + VPS gestionado
@@ -88,8 +88,8 @@ export function ContactSection() {
 
           {/* Right - Contact Form */}
           <Card className="border-border/50">
-            <CardContent className="p-6">
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <CardContent className="p-4 sm:p-6">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium text-foreground">
@@ -101,6 +101,7 @@ export function ContactSection() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
+                      className="h-12"
                     />
                   </div>
                   <div className="space-y-2">
@@ -114,6 +115,7 @@ export function ContactSection() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       required
+                      className="h-12"
                     />
                   </div>
                 </div>
@@ -127,6 +129,7 @@ export function ContactSection() {
                     placeholder="Nombre de tu empresa"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                    className="h-12"
                   />
                 </div>
 
@@ -141,13 +144,14 @@ export function ContactSection() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     required
+                    className="resize-none"
                   />
                 </div>
 
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 h-12"
                 >
                   Enviar mensaje
                   <Send className="ml-2 w-4 h-4" />

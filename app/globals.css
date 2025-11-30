@@ -121,27 +121,43 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    box-sizing: border-box;
   }
   
   html {
     @apply scroll-smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    min-height: 100%;
   }
   
   body {
     @apply bg-background text-foreground;
     overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
   }
   
-  /* Better mobile tap targets */
-  button, a {
+  /* Better mobile tap targets - minimum 44x44px */
+  button, a, input, select, textarea {
     @apply touch-manipulation;
+    min-height: 44px;
+    min-width: 44px;
   }
   
-  /* Prevent text size adjustment on mobile */
-  html {
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
+  /* Fix for iOS Safari bottom bar */
+  @supports (-webkit-touch-callout: none) {
+    body {
+      min-height: -webkit-fill-available;
+    }
+  }
+  
+  /* Prevent horizontal overflow on all elements */
+  img, video, iframe, embed, object {
+    max-width: 100%;
+    height: auto;
   }
 }

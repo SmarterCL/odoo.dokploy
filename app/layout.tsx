@@ -14,6 +14,13 @@ export const metadata: Metadata = {
     "Implementamos Odoo con conexiones listas a WhatsApp, IA local, n8n y tu negocio real. Especialistas Odoo en Chile con enfoque en automatización e inteligencia artificial.",
   keywords: "Odoo, ERP, Chile, implementación, automatización, IA, n8n, WhatsApp, SmarterOS",
   generator: "v0.app",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+  },
+  themeColor: "#793d67",
 }
 
 export default function RootLayout({
